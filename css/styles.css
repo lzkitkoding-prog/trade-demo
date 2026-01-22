@@ -1,0 +1,173 @@
+/* =========================
+   THEME TOKENS (LOCK THESE)
+   ========================= */
+:root{
+  --slate: #22333b;          /* deep slate */
+  --slate-2: #2e444d;        /* lighter slate for hovers/borders */
+  --orange: #f08a00;         /* construction orange */
+  --orange-2: #ff9a1f;       /* hover orange */
+  --bg: #ffffff;
+  --muted: #f3f5f7;          /* very light grey */
+  --text: #172026;           /* near-black, softer than pure black */
+}
+
+/* =========================
+   BASE
+   ========================= */
+body{
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5{
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Utility: section dividers like your wireframes */
+.section-rule{
+  height: 3px;
+  background: var(--orange);
+  width: 100%;
+  border: 0;
+  opacity: 1;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar{
+  background: var(--slate);
+  border-bottom: 2px solid rgba(240, 138, 0, 0.35);
+}
+
+/* logo sizing safety */
+.navbar-brand img{
+  max-height: 44px;
+  width: auto;
+}
+
+/* nav links */
+.navbar .nav-link{
+  color: #e7eef2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(240, 138, 0, 0.35);
+  margin-left: .4rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{
+  color: var(--slate);
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+/* Add .active manually to the current page link */
+.navbar .nav-link.active{
+  color: var(--slate);
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+/* Contact button in nav */
+.navbar .btn.btn-warning{
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--slate);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.25rem;
+}
+
+.navbar .btn.btn-warning:hover,
+.navbar .btn.btn-warning:focus{
+  background: var(--orange-2);
+  border-color: var(--orange-2);
+  color: var(--slate);
+}
+
+/* Mobile: reduce borders so it doesn’t look chaotic */
+@media (max-width: 991.98px){
+  .navbar .nav-link{
+    margin-left: 0;
+    margin-top: .4rem;
+  }
+  .navbar .btn.btn-warning{
+    margin-top: .6rem;
+    width: 100%;
+  }
+}
+
+/* =========================
+   BUTTONS (GLOBAL)
+   ========================= */
+.btn-primary, .btn-warning{
+  border-radius: 12px;
+}
+
+/* Optional: trade-style big CTA button */
+.btn-cta{
+  background: var(--orange);
+  border: 0;
+  color: var(--slate);
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.9rem 1.6rem;
+  border-radius: 14px;
+}
+
+.btn-cta:hover,
+.btn-cta:focus{
+  background: var(--orange-2);
+  color: var(--slate);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer{
+  background: var(--slate);
+  color: #e7eef2;
+  padding: 3rem 0 2rem;
+  border-top: 3px solid rgba(240, 138, 0, 0.45);
+}
+
+.footer h5{
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.footer p{
+  margin-bottom: .5rem;
+  color: #d7e2e8;
+}
+
+.footer a{
+  color: #e7eef2;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240, 138, 0, 0.35);
+}
+
+.footer a:hover,
+.footer a:focus{
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+.footer hr{
+  border-color: rgba(255,255,255,0.12);
+  margin: 1.5rem 0;
+}
+
+/* footer logo */
+.footer img{
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+}
